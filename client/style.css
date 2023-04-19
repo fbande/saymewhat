@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Söhne,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}
+
+body {
+  background: #343541;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  background: #343541;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#chat_container {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  padding-bottom: 20px;
+  scroll-behavior: smooth;
+  border-color: rgba(32,33,35,.5);
+  margin-top: 44px;
+  content:  "\u25A0";
+
+}
+
+/* hides scrollbar */
+#chat_container::-webkit-scrollbar {
+  display: none;
+}
+
+.wrapper {
+  width: 100%;
+  padding: 15px;
+}
+
+.ai {
+  background: #40414F;
+}
+
+.chat {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.profile {
+  width: 30px;
+  height: 30px;
+  border-radius: 2px;
+
+  background: #5436DA;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ai .profile {
+  background: #10a37f;
+}
+
+.profile img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+.message {
+  flex: 1;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.75;
+
+  max-width: 100%;
+  overflow-x: scroll;
+
+  /*
+   * white space refers to any spaces, tabs, or newline characters that are used to format the CSS code
+   * specifies how white space within an element should be handled. It is similar to the "pre" value, which tells the browser to treat all white space as significant and to preserve it exactly as it appears in the source code.
+   * The pre-wrap value allows the browser to wrap long lines of text onto multiple lines if necessary.
+   * The default value for the white-space property in CSS is "normal". This tells the browser to collapse multiple white space characters into a single space, and to wrap text onto multiple lines as needed to fit within its container.
+  */
+  white-space: pre-wrap; 
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* hides scrollbar */
+.message::-webkit-scrollbar {
+  display: none;
+
+}
+
+#flecha{
+  color: #a0a0ab;
+  font-size: 16px;
+}
+form {
+  width: calc(98% - 20px);
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 10px;
+   background: #e0e0e0; 
+
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid #ececf1;
+  
+  
+}
+
+
+
+textarea {
+  width: 100%;
+  color: #40414F;
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+button {
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  background: transparent;
+}
+
+form img {
+  width: 30px;
+  height: 30px;
+}
+.navbar-toggler:focus {
+   box-shadow: none !important;
+}
+
+#app {
+ background-color: white !important;
+
+}
+#chat_container{
+  margin-top: 60px;
+}
+.navbar{
+  border-bottom: 1px solid #ececf1;
+  background-color: white;
+}
+
+.navbar-toggler{
+  border: none !important;
+}
+.nav-item {
+  color:#40414F;
+  cursor: pointer;
+  display: flex;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  line-height: 20px;
+  margin-top: 0.5em;
+ 
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.navbar-brand{
+  color: #40414F !important;
+  font-weight: bold !important;
+}
+
+#cardAcerca, #cardAcerca .card-body{
+  border: none  !important;
+  margin-left: 20px;
+}
+/*********************************** flecha abajo scroll****************************/
+.scroll-btn {
+  position: fixed;
+  bottom: 60px;
+  right: 16px;
+  width: 30px;
+  height:30px;
+  border-radius: 50%;
+  background-color: #5e5c5c;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.scroll-btn i {
+  font-size: 24px;
+  margin-top: 13px;
+  color: white;
+}
+
+.scroll-btn.active {
+  opacity: 1;
+}
