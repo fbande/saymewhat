@@ -113,7 +113,7 @@ const handleSubmit = async (e) => {
 
     // messageDiv.innerHTML = "..."
     loader(messageDiv)
-    const fer="Fernando Bande es el desarrollador de esta hermosa aplicacion de OpenAI. \n Si quieres contactarlo hacelo a fernandobande@hotmail.com Fernando Bande es el desarrollador de esta hermosa aplicacion de OpenAI. \n Si quieres contactarlo hacelo a fernandobande@hotmail.com Fernando Bande es el desarrollador de esta hermosa aplicacion de OpenAI. \n Si quieres contactarlo hacelo a fernandobande@hotmail.com Fernando Bande es el desarrollador de esta hermosa aplicacion de OpenAI. \n Si quieres contactarlo hacelo a fernandobande@hotmail.com Fernando Bande es el desarrollador de esta hermosa aplicacion de OpenAI. \n Si quieres contactarlo hacelo a fernandobande@hotmail.com Fernando Bande es el desarrollador de esta hermosa aplicacion de OpenAI. \n Si quieres contactarlo hacelo a fernandobande@hotmail.com Fernando Bande es el desarrollador de esta hermosa aplicacion de OpenAI. \n Si quieres contactarlo hacelo a fernandobande@hotmail.com ";;
+    const fer="Fernando Bande es el desarrollador de esta hermosa aplicacion de OpenAI. \n Si quieres contactarlo hacelo a fernandobande@hotmail.com ";;
     let esFer = false;
 
    if(  data.get('prompt').toLowerCase().indexOf("fernando") !== -1)
@@ -122,7 +122,11 @@ const handleSubmit = async (e) => {
     }
     else{
         esFer = false;
-        response = await fetch('http://localhost:5000', {
+      //  response = await fetch('http://localhost:5000', { //local
+        response = await fetch('https://server-0epp.onrender.com/', { //remote from server
+
+        
+
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
